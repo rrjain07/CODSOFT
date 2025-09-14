@@ -3,42 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dark Calculator</title>
+  <title> Calculator task</title>
   <style>
     body {
-      margin: 0;
+      margin: 0px;
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: black; /* full black background */
-      font-family: Arial, sans-serif;
-    }
+      background: whitesmoke;
+      font-family: Arial;
+       }
 
     .calculator {
-      background: #1c1c1c;
+      background-color: gray;
       padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0px 5px 20px rgba(0,0,0,0.7);
+      width:370px;
     }
 
     .display {
-      width: 100%;
+      width: 93%;
       height: 60px;
-      background: #000;
-      color: #0f0;
+      background : black;
+      color: rgb(184, 109, 109);
       text-align: right;
       margin-bottom: 20px;
       font-size: 2rem;
       padding: 10px;
-      border-radius: 10px;
-      border: none;
+      border-radius: 14px;
     }
 
     .buttons {
       display: grid;
       grid-template-columns: repeat(4, 80px);
-      grid-gap: 10px;
+      grid-gap: 15px;
+      
     }
 
     button {
@@ -47,8 +46,8 @@
       border: none;
       border-radius: 10px;
       cursor: pointer;
-      background: #333;
-      color: white;
+      background: whitesmoke;
+      color: black;
       transition: 0.2s;
     }
 
@@ -57,18 +56,18 @@
     }
 
     .operator {
-      background: #ff9800;
+      background: #d53d89;
       color: #fff;
     }
 
     .equal {
-      background: #4caf50;
+      background: #1bb6d5;
       color: #fff;
       grid-column: span 2;
     }
 
     .clear {
-      background: #f44336;
+      background: #8f1dac;
       color: #fff;
       grid-column: span 2;
     }
@@ -81,8 +80,10 @@
     <div class="buttons">
       <button onclick="clearDisplay()" class="clear">C</button>
       <button onclick="deleteChar()">DEL</button>
-      <button onclick="appendValue('/')">÷</button>
-      <button onclick="appendValue('*')">×</button>
+      <button onclick="appendValue('/')"class="operator">÷</button>
+    
+    
+      <button onclick="appendValue('*')"class="operator">×</button>
 
       <button onclick="appendValue('7')">7</button>
       <button onclick="appendValue('8')">8</button>
@@ -97,7 +98,9 @@
       <button onclick="appendValue('1')">1</button>
       <button onclick="appendValue('2')">2</button>
       <button onclick="appendValue('3')">3</button>
-      <button onclick="calculate()" class="equal">=</button>
+        <button onclick="calculate()" class="equal">=</button>
+     
+     
 
       <button onclick="appendValue('0')" style="grid-column: span 2;">0</button>
       <button onclick="appendValue('.')">.</button>
